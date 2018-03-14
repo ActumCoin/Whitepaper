@@ -124,11 +124,18 @@ The high energy usage that is required to power Bitcoin miners and the lower, bu
 
 As mentioned before, all rewards from mining a block are in ActumCoin. The reward from mining a block initially will be \texttt{16 ACM}, but the reward will halve every \texttt{524,288} blocks. As an example, the 10th block would reward its miner with \texttt{16 ACM}, while the 1,048,577th would reward them with \texttt{4 ACM}. This is to prevent the extreme hyperinflation of ActumCrypto and keep balances within “reasonable” amounts. Even so, after \texttt{2,097,152} blocks, when the reward is at \texttt{1 ACM}, there will be \texttt{16,262,928 ACM}. The reward will, of course, continue to halve, although, at some point, it may be fixed at its current value.
 
+In order to prevent miners from simply using separate instances of the mining program to circumvent the round-robin system, miners are rewarded for “loyalty”. The more blocks a miner mines, the higher percentage of the reward the receive. This is calculated using the formula $\frac{2}{15}m^{n}$, where `m` is mining diversity and `n` is the number of previous blocks the miner has mined. 
 \subsection{Conclusion}
 In order to fix many of the shortcomings of popular cryptocurrencies, a new form of blockchain is required. ActumCrypto is a tokenized blockchain with round-robin mining, no transaction fees, and smart contracts, solving these problems. By tokenizing the blockchain, storage space is reduced, and atomic exchanges become easier. Round-robin mining helps reduce energy usage, free up high power components for other work-loads like servers and gaming, and prevent 51\% attacks. Smart contracts help prevent fraud, scams, and make the usage of cryptocurrencies safer and more fair.
+\pagebreak
 
 \section{Acknowledgements}
 Thanks to Ayham Harb and Ben Schattinger for the helpful feedback.
+
+\section{Revisions}
+March 9, 2019, Original
+
+March 14, 2019, Added "loyalty" to Mining section and switched to LaTeX
 
 \newpage
 \printbibliography
